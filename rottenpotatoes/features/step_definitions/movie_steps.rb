@@ -43,7 +43,7 @@ end
 
 Then /I should see all of the movies/ do
     rows = page.all('#movies tr').size - 1
-     rows.should == Movie.count
+    rows.should == Movie.count
   # Make sure that all the movies in the app are visible in the table
   # fail "Unimplemented"
 end
