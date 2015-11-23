@@ -12,9 +12,17 @@ end
 # Make sure that one string (regexp) occurs before or after another one
 #   on the same page
 
+When /^I follow“(.*)”$/ do |sort_choice|
+  if sort_choice=="Movie Title"
+    click_link("title_header")
+  elsif sort_choice=="Release Date"
+      click_link("release_date")
+  end
+end
+
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
-  assert page.body =~ /#{e1}.+#{e2}/m
-  #  ensure that that e1 occurs before e2.
+  expect page.body =~ /#{e1}.+#{e2}/m
+    #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
   # fail "Unimplemented"
 end
