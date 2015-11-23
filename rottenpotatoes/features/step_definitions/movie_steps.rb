@@ -16,7 +16,7 @@ When /^I follow“(.*)”$/ do |sort_choice|
   if sort_choice=="Movie Title"
     click_link("title_header")
   elsif sort_choice=="Release Date"
-      click_link("release_date")
+      click_link("release_date_header")
   end
 end
 
