@@ -36,4 +36,9 @@ Scenario: sort movies alphabetically
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
-  # your steps here
+  Then I should be on the home page
+  And I should see "2001: A Space Odyssey" before "Raiders of the Lost Ark"
+  And I should see "The Terminator" before "When Harry Met Sally"
+  And I should see "Aladdin" before "Chicken Run"
+  And I should see "Chicken Run" before "Chocolat"
+  And I should see "Chocolat" before "The Help"
